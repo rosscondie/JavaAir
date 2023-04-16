@@ -73,7 +73,7 @@ public class FlightTest {
 
     @Test
     public void flightCanReturnNumberOfAvailableSeats() {
-        assertEquals(300, flight.getNumberOfAvailableSeats());
+        assertEquals(5, flight.getNumberOfAvailableSeats());
     }
 
     @Test
@@ -91,5 +91,10 @@ public class FlightTest {
         flight.addPassenger(new Passenger("Robert Zane", 2));
         flight.addPassenger(new Passenger("Jessica Pearson", 2));
         assertEquals(5, flight.getPassengers());
+    }
+
+    @Test
+    public void pilotShouldBeAbleToFlyThePlane() {
+        assertEquals("I can fly the plane, trust me!", flight.pilotCanFly());
     }
 }

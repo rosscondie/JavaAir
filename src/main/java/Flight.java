@@ -65,4 +65,9 @@ public class Flight {
         return "Sorry No Space Available";
 
     }
+
+    public String pilotCanFly() {
+        return this.pilots.get(0).pilotCanFly();
+
+    }
 }
