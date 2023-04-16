@@ -97,4 +97,9 @@ public class FlightTest {
     public void pilotShouldBeAbleToFlyThePlane() {
         assertEquals("I can fly the plane, trust me!", flight.pilotCanFly());
     }
+
+    @Test
+    public void cabinCrewMemberShouldBeAbleToRelayMessage() {
+        assertEquals("Please fasten your seatbelts", cabinCrewMembers.get(0).relayMessage());
+    }
 }

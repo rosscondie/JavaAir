@@ -15,4 +15,8 @@ public class CabinCrewMember {
     public String getRank() {
         return rank;
     }
+
+    public String relayMessage() {
+        return "Please fasten your seatbelts";
+    }
 }
