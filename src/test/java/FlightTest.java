@@ -1,7 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
@@ -48,6 +47,11 @@ public class FlightTest {
     }
 
     @Test
+    public void flightHasPlane() {
+        assertEquals(plane, flight.getPlane());
+    }
+
+    @Test
     public void flightHasFlightNumber() {
         assertEquals("FR1234", flight.getFlightNumber());
     }
@@ -55,5 +59,26 @@ public class FlightTest {
     @Test
     public void flightHasDestination() {
         assertEquals("EDI", flight.getFlightDestination());
+    }
+
+    @Test
+    public void flightHasDepartureAirport() {
+        assertEquals("HAM", flight.getDepartureAirport());
+    }
+
+    @Test
+    public void flightHasDepartureTime() {
+        assertEquals("15:30", flight.getDepartureTime());
+    }
+
+    @Test
+    public void flightCanReturnNumberOfAvailableSeats() {
+        assertEquals(300, flight.getNumberOfAvailableSeats());
+    }
+
+    @Test
+    public void flightCanBookPassengerIfSeatsAvailable() {
+        flight.addPassenger(new Passenger("Harvey Specter", 2));
+        assertEquals(1, flight.getPassengers());
     }
 }

@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Flight {
@@ -35,11 +34,34 @@ public class Flight {
         return passengers.size();
     }
 
+    public Plane getPlane() {
+        return this.plane;
+    }
+
     public String getFlightNumber() {
         return this.flightNumber;
     }
 
     public String getFlightDestination() {
         return this.destination;
+    }
+
+    public String getDepartureAirport() {
+        return this.departureAirport;
+    }
+
+    public String getDepartureTime() {
+        return this.departureTime;
+    }
+
+    public int getNumberOfAvailableSeats() {
+        return plane.getCapacity() - passengers.size();
+    }
+
+    public void addPassenger(Passenger passenger) {
+        if (getNumberOfAvailableSeats() > 0){
+            passengers.add(passenger);
+        }
+
     }
 }
