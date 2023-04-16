@@ -81,4 +81,15 @@ public class FlightTest {
         flight.addPassenger(new Passenger("Harvey Specter", 2));
         assertEquals(1, flight.getPassengers());
     }
+
+    @Test
+    public void flightCannotBookPassengerIfNoSeatsAvailable() {
+        flight.addPassenger(new Passenger("Harvey Specter", 2));
+        flight.addPassenger(new Passenger("Mike Ross", 2));
+        flight.addPassenger(new Passenger("Louis Litt", 2));
+        flight.addPassenger(new Passenger("Donna Paulsen", 2));
+        flight.addPassenger(new Passenger("Robert Zane", 2));
+        flight.addPassenger(new Passenger("Jessica Pearson", 2));
+        assertEquals(5, flight.getPassengers());
+    }
 }

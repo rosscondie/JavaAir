@@ -1,7 +1,7 @@
 public enum PlaneType {
     BOEING747("Boeing 747", 200, 500),
     CESSNA172("Cessna 172", 150, 800),
-    AIRBUSA320("AirBus A320", 300, 1000);
+    AIRBUSA320("AirBus A320", 5, 1000);
 
     private final String name;
     private final int capacity;

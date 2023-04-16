@@ -58,10 +58,11 @@ public class Flight {
         return plane.getCapacity() - passengers.size();
     }
 
-    public void addPassenger(Passenger passenger) {
+    public String addPassenger(Passenger passenger) {
         if (getNumberOfAvailableSeats() > 0){
             passengers.add(passenger);
         }
+        return "Sorry No Space Available";
 
     }
 }
